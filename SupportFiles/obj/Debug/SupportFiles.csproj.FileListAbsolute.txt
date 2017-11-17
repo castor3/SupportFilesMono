@@ -1,0 +1,10 @@
+\\mac\home\Documents\Visual Studio 2017\Projects\SupportFiles\SupportFiles\bin\Debug\SupportFiles.dll
+\\mac\home\Documents\Visual Studio 2017\Projects\SupportFiles\SupportFiles\bin\Debug\SupportFiles.pdb
+\\mac\home\Documents\Visual Studio 2017\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.csprojResolveAssemblyReference.cache
+\\mac\home\Documents\Visual Studio 2017\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.csproj.CoreCompileInputs.cache
+\\mac\home\Documents\Visual Studio 2017\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.dll
+\\mac\home\Documents\Visual Studio 2017\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.pdb
+C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\bin\Debug\SupportFiles.dll
+C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\bin\Debug\SupportFiles.pdb
+C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.dll
+C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.pdb
