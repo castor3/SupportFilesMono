@@ -8,3 +8,4 @@ C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFile
 C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\bin\Debug\SupportFiles.pdb
 C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.dll
 C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.pdb
+C:\Users\santosru\Documents\Visual Studio 2015\Projects\SupportFiles\SupportFiles\obj\Debug\SupportFiles.csprojResolveAssemblyReference.cache
