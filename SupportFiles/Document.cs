@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace SupportFiles
@@ -66,9 +64,12 @@ namespace SupportFiles
 				return false;
 			}
 		}
+		/// <summary>
+		/// Concats the log message with a time stamp and writes to a file
+		/// </summary>
 		public static bool WriteToLogFile(string path, string logMessage)
 		{
-			var fullMessage = string.Concat(DateTime.Now, " : ", logMessage);
+			var fullMessage = string.Concat(DateTime.Now, " : ", logMessage, Environment.NewLine);
 			if (!AppendToFile(path, fullMessage)) return false;
 			return true;
 		}

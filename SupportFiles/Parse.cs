@@ -10,7 +10,7 @@ namespace SupportFiles
 	class Parse
 	{
 		/// <summary>
-		/// Parse string to double. With "AllowDecimalPoint" and InvariantCulture
+		/// Parse string to double. With 'AllowDecimalPoint' and 'InvariantCulture'
 		/// </summary>
 		public double? ParseDoubleWithOptions(string valueToParse)
 		{

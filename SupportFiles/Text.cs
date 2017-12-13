@@ -9,6 +9,9 @@ namespace SupportFiles
 {
 	public class Text
 	{
+		/// <summary>
+		/// Replace accented letters with 'normal' ones
+		/// </summary>
 		public static string RemoveDiacritics(string text)
 		{// Replaces accented letters with equivalent ones (normalizes the string)
 			if (string.IsNullOrWhiteSpace(text)) return string.Empty;
