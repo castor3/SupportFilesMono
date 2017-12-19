@@ -23,6 +23,7 @@ namespace SupportFiles
 				return false;
 			}
 		}
+		
 		public static IEnumerable<string> YieldReturnLinesFromFile(string path)
 		{
 			if (File.Exists(path)) {
@@ -30,6 +31,7 @@ namespace SupportFiles
 					yield return item;
 			}
 		}
+		
 		/// <summary>
 		/// Rewrites the entire file with the argument newFileContent
 		/// </summary>
@@ -47,6 +49,7 @@ namespace SupportFiles
 				return false;
 			}
 		}
+				
 		/// <summary>
 		/// Appends the string to the end of the file
 		/// </summary>
@@ -64,14 +67,22 @@ namespace SupportFiles
 				return false;
 			}
 		}
+		
 		/// <summary>
 		/// Concats the log message with a time stamp and writes to a file
 		/// </summary>
 		public static bool WriteToLogFile(string path, string logMessage)
 		{
-			var fullMessage = string.Concat(DateTime.Now, " : ", logMessage, Environment.NewLine);
-			if (!AppendToFile(path, fullMessage)) return false;
-			return true;
+			var fullMessage = $"{DateTime.UtcNow} : {logMessage}{Environment.NewLine}";
+			
+			return AppendToFile(path, fullMessage);
+		}
+
+		public static bool WriteToLogFile(string path, string logMessage, params object[] para)
+		{
+			var fullMessage = $"{DateTime.UtcNow} : {string.Format(logMessage, para)}{Environment.NewLine}";
+
+			return AppendToFile(path, fullMessage);
 		}
 	}
 }
