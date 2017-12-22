@@ -8,30 +8,32 @@ namespace SupportFiles
 {
 	public class Document
 	{
-		public static bool ReadFromFile(string path, out IEnumerable<string> linesFromFile)
+		public static string[] ReadFromFile(string path)
 		{
-			linesFromFile = Enumerable.Empty<string>();
 			try {
-				linesFromFile = File.ReadLines(path);
-				return true;
+				return File.ReadAllLines(path);
 			}
 			catch (Exception exc) when (exc is IOException ||
 										exc is FileNotFoundException ||
 										exc is DirectoryNotFoundException ||
 										exc is UnauthorizedAccessException) {
 				MessageBox.Show(exc.Message);
-				return false;
+				return new string[0];
 			}
 		}
-		
-		public static IEnumerable<string> YieldReturnLinesFromFile(string path)
+
+		public static string ReadSpecificLineFromFile(string path, int line)
 		{
 			if (File.Exists(path)) {
-				foreach (var item in File.ReadLines(path))
-					yield return item;
+				using (var stream = new StreamReader(path)) {
+					for (int i = 0; i < line; i++)
+						stream.ReadLine();
+					return stream.ReadLine();
+				}
 			}
+			return string.Empty;
 		}
-		
+
 		/// <summary>
 		/// Rewrites the entire file with the argument newFileContent
 		/// </summary>
@@ -49,7 +51,7 @@ namespace SupportFiles
 				return false;
 			}
 		}
-				
+
 		/// <summary>
 		/// Appends the string to the end of the file
 		/// </summary>
@@ -67,14 +69,14 @@ namespace SupportFiles
 				return false;
 			}
 		}
-		
+
 		/// <summary>
 		/// Concats the log message with a time stamp and writes to a file
 		/// </summary>
 		public static bool WriteToLogFile(string path, string logMessage)
 		{
 			var fullMessage = $"{DateTime.UtcNow} : {logMessage}{Environment.NewLine}";
-			
+
 			return AppendToFile(path, fullMessage);
 		}
 
