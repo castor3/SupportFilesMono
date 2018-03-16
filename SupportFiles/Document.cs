@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Windows;
 
 namespace SupportFiles
 {
@@ -22,7 +19,7 @@ namespace SupportFiles
 			{
 				return File.ReadAllLines(path);
 			}
-			catch (Exception exc)
+			catch (Exception)
 			{
 				return new string[0];
 			}
@@ -62,7 +59,7 @@ namespace SupportFiles
 				File.WriteAllLines(path, newFileContent);
 				return true;
 			}
-			catch (Exception exc)
+			catch (Exception)
 			{
 				return false;
 			}
@@ -81,7 +78,7 @@ namespace SupportFiles
 				File.AppendAllText(path, stringToSave);
 				return true;
 			}
-			catch (Exception exc)
+			catch (Exception)
 			{
 				return false;
 			}
