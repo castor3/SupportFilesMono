@@ -1,8 +1,3 @@
 .idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-.vs
 /SupportFiles/bin
 /SupportFiles/obj
