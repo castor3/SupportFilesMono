@@ -3,6 +3,9 @@ using System.Windows.Input;
 
 namespace SupportFiles
 {
+	/// <summary>
+	/// Command that runs on a condition
+	/// </summary>
 	public class RelayCommand : ICommand
 	{
 		private Action _execute;
@@ -25,6 +28,10 @@ namespace SupportFiles
 			return _canExecute();
 		}
 
+		/// <summary>
+		/// Method that executes when the command is called
+		/// </summary>
+		/// <param name="parameter"></param>
 		public void Execute(object parameter)
 		{
 			_execute();
